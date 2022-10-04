@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --main-color: #001939;
+  --main-color: #ffffff;
   --second-color: #efc06b;
   --line-color: #f5f5f5;
 
@@ -9,13 +9,17 @@
 }
 
 /* Navbar Style */
-.Navbar-Movies {
-  background-color: #F7F7F7;
+body {
+  background-color: #070D2D;
+}
+
+hr {
+  color: #fffff;
 }
 
 .Navbar-Movies .Navbar-Nav {
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 8px;
 }
 
 .LogoMovies {
