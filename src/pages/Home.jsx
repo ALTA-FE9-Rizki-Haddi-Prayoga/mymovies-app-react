@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/style.css";
 import Navbar from "../components/Navbar";
 import CardMovies from "../components/CardMovies";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <div className="container">
           <CardMovies/>
         </div>
+        <Footer/>
       </div>
     </>
   );
