@@ -6,7 +6,7 @@ import Logo from "../assets/logo.svg";
 const Footer = () => {
   return (
     <>
-      <hr className="container-fluid text-white pb-4" />
+      <hr className="Divider-Movies container-fluid text-white pb-4 " />
       <div className="Footer-Movies container">
         <Row>
           <div className="FooterLogo">

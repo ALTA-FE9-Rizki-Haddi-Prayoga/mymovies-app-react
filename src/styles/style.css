@@ -85,6 +85,10 @@ a {
   margin-top: 20px;
 }
 
+.Btn-Favorite:hover {
+  background-color: #7187E9;
+}
+
 /* Footer Style */
 .Footer-Movies {
   background-color: #070D2D;
@@ -124,4 +128,9 @@ a {
   font-weight: 400;
   font-size: 16px;
   margin-top: 20px;
+}
+
+/* Divider Style */
+.Divider-Movies {
+  margin-top: 120px;
 }
