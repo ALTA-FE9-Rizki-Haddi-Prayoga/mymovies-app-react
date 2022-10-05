@@ -54,6 +54,7 @@ a {
 .Card-Body {
   width: 270px;
   height: 360px;
+  margin-bottom: 160px;
   background-color: #070D2D;
 }
 
