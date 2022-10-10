@@ -1,13 +1,13 @@
 ## Tugas Membuat Webiste Movies dengan React JS
 
+### Link Deployment: https://mymovies-app-react-cyan.vercel.app
+
 ### Release 1 (Create static Page)
 - Create a react app using create-react-app and name it with mymovies-app-react 
 - Create a movies app that shows list of now playing movies, detail movie & list favorite movies page
 - We still using local state data, so we don't need to use the API on this release
 - Make your web as cool as possible
 - Class Components
-
-### Link Deployment: https://mymovies-app-react-cyan.vercel.app
 
 ## Release 2 (Fetch API)
 - Register on TMDB API on this link 
