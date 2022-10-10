@@ -8,7 +8,7 @@ const CardMovies = (props) => {
       <CardGroup className="Card-Movies">
         <Row className="Card-List">
           <Col className="List-Movies">
-            <Card className="Card-Body">
+            <Card className="Card-Body" onClick={props.onClick}>
               <Card.Img src={props.src} />
               <Card.Body className="TitleMovies">
                 <Card.Link onClick={props.onClick}>
