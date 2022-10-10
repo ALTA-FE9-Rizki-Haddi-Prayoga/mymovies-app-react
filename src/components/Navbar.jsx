@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/style.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 
 const NavbarMovies = () => {
@@ -11,20 +12,23 @@ const NavbarMovies = () => {
           <Navbar.Brand href="#home" className="LogoMovies">
             <img src={logo} alt="Logo Movies" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-white" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="bg-white"
+          />
           <Navbar.Collapse className="Navbar-List">
             <Nav className="gap-2">
-              <a href="#home" className="List">
+              <Link className="List" to={"/"}>
                 HOME
-              </a>
-              <a href="#favorite" className="List">
+              </Link>
+              <Link className="List" to={"/favorite"}>
                 FAVORITES
-              </a>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <hr className="container-fluid text-white"/>
+      <hr className="container-fluid text-white" />
     </>
   );
 };

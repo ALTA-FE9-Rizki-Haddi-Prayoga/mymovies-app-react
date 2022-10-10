@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/style.css";
-// import Poster from "../assets/poster-onepiece.png"
 import { Card, CardGroup, Row, Col } from "react-bootstrap";
 
 const CardMovies = (props) => {
@@ -12,13 +11,10 @@ const CardMovies = (props) => {
             <Card className="Card-Body">
               <Card.Img src={props.src} />
               <Card.Body className="TitleMovies">
-                <Card.Link>
-                  <h3 style={{color: "white"}}>{props.title}</h3>
+                <Card.Link onClick={props.onClick}>
+                  <h3 style={{ color: "white" }}>{props.title}</h3>
                 </Card.Link>
-                <button
-                  className="Btn-Favorite"
-                  variant="primary"
-                >
+                <button className="Btn-Favorite" variant="primary">
                   ADD TO FAVORITE
                 </button>
               </Card.Body>
