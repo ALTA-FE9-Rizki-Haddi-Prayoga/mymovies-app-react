@@ -7,6 +7,8 @@
 - Make your web as cool as possible
 - Class Components
 
+### Link Deployment: https://mymovies-app-react-cyan.vercel.app
+
 ## Release 2 (Fetch API)
 - Register on TMDB API on this link 
 - Fetch now playing movies from TMDB API using Axios library
