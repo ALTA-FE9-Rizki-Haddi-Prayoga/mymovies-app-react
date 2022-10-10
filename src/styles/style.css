@@ -61,6 +61,36 @@ a {
   font-weight: 700;
 }
 
+.Head-404 {
+  font-family: var(--main-font);
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  align-items: center;
+  margin-top: 160px;
+}
+
+.Text-404 {
+  font-family: var(--main-font);
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.Btn-404 {
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+  width: 230px;
+  height: 43px;
+  background: #556fe5;
+  border-radius: 20px;
+  margin-top: 42px;
+}
+
 /* Card Style */
 .Card-Body {
   width: 270px;
