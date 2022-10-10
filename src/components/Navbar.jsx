@@ -16,7 +16,7 @@ const NavbarMovies = () => {
             aria-controls="basic-navbar-nav"
             className="bg-white"
           />
-          <Navbar.Collapse className="Navbar-List">
+          <Navbar.Collapse className="Navbar-List justify-content-between">
             <Nav className="gap-2">
               <Link className="List" to={"/"}>
                 HOME
@@ -25,6 +25,7 @@ const NavbarMovies = () => {
                 FAVORITES
               </Link>
             </Nav>
+            <button className="Toggle">Dark Mode</button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 :root {
   --main-color: #ffffff;
   --second-color: #efc06b;
   --line-color: #f5f5f5;
 
-  --main-font: 'Poppins', sans-serif;
+  --main-font: "Poppins", sans-serif;
 }
 
 body {
-  background-color: #070D2D;
+  background-color: #070d2d;
 }
 
 hr {
@@ -19,7 +19,6 @@ hr {
 a {
   text-decoration: none;
 }
-
 
 /* Navbar Style */
 .Navbar-Movies .Navbar-Nav {
@@ -40,6 +39,18 @@ a {
   margin-right: 60px;
 }
 
+.Toggle {
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #556fe5;
+  border-radius: 8px;
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /* Header Style */
 .Header-Movies h2 {
   color: var(--main-color);
@@ -55,7 +66,7 @@ a {
   width: 270px;
   height: 360px;
   margin-bottom: 160px;
-  background-color: #070D2D;
+  background-color: #070d2d;
 }
 
 .Card-List .List-Movies {
@@ -66,12 +77,12 @@ a {
 .Card-Movies h3 {
   font-family: var(--main-font);
   font-size: 18px;
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 .Btn-Favorite {
-  background-color: #556FE5;
-  color: #FFFFFF;
+  background-color: #556fe5;
+  color: #ffffff;
   display: flex;
   align-items: center;
   font-family: var(--main-font);
@@ -87,12 +98,12 @@ a {
 }
 
 .Btn-Favorite:hover {
-  background-color: #7187E9;
+  background-color: #7187e9;
 }
 
 /* Footer Style */
 .Footer-Movies {
-  background-color: #070D2D;
+  background-color: #070d2d;
   padding-bottom: 40px;
 }
 
@@ -100,7 +111,7 @@ a {
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 12px;
 }
 
