@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { WithRouter } from "../utils/Navigation";
+import { useNavigate } from "react-router-dom";
+
 import "../styles/style.css";
 import Navbar from "../components/Navbar";
 import CardMovies from "../components/CardMovies";
@@ -6,6 +9,7 @@ import Footer from "../components/Footer";
 import axios from "axios";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [movie, setMovie] = useState([]);
 
   const getMovie = async () => {
@@ -25,6 +29,19 @@ const Home = () => {
     getMovie();
   }, []);
 
+  const detailPage = (item) => {
+    navigate("/details", {
+      state: {
+        title: item.title,
+        date: item.release_date,
+        src: `https://image.tmdb.org/t/p/original` + item.poster_path,
+        description: item.overview,
+        rating: item.vote_average,
+        popular: item.popularity,
+      },
+    });
+  };
+
   return (
     <>
       <div>
@@ -42,6 +59,11 @@ const Home = () => {
                 <CardMovies
                   src={`https://image.tmdb.org/t/p/original` + data.poster_path}
                   title={data.original_title}
+                  date={data.release_date}
+                  description={data.overview}
+                  rating={data.vote_average}
+                  popular={data.popularity}
+                  onClick={() => detailPage(data)}
                 />
               </div>
             );
@@ -53,4 +75,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default WithRouter(Home);

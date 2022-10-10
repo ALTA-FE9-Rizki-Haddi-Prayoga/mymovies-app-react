@@ -1,4 +1,5 @@
 import React from "react";
+import { WithRouter } from "../utils/Navigation";
 import "../styles/style.css";
 import Navbar from "../components/Navbar";
 import CardMovies from "../components/CardMovies";
@@ -21,4 +22,4 @@ const Favorite = () => {
   );
 };
 
-export default Favorite;
+export default WithRouter(Favorite);
