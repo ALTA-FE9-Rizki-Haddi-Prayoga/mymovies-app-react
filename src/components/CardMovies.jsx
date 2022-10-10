@@ -9,7 +9,7 @@ const CardMovies = (props) => {
         <Row className="Card-List">
           <Col className="List-Movies">
             <Card className="Card-Body">
-              <Card.Img src={props.src} />
+              <Card.Img src={props.src} onClick={props.onClick} />
               <Card.Body className="TitleMovies">
                 <Card.Link onClick={props.onClick}>
                   <h3 style={{ color: "white" }}>{props.title}</h3>

@@ -14,14 +14,16 @@ const Details = () => {
     <>
       <div className="Body">
         <Navbar />
-        <MoviesDetail
-          title={location.state.title}
-          src={location.state.src}
-          date={location.state.date}
-          description={location.state.description}
-          rating={location.state.rating}
-          popular={location.state.popular}
-        />
+        <div className="mt-5">
+          <MoviesDetail
+            title={location.state.title}
+            src={location.state.src}
+            date={location.state.date}
+            description={location.state.description}
+            rating={location.state.rating}
+            popular={location.state.popular}
+          />
+        </div>
         <Footer />
       </div>
     </>
