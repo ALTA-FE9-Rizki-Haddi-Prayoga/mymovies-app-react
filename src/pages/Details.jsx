@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
 import { WithRouter } from "../utils/Navigation";
 import { useLocation } from "react-router-dom";
+import FavoriteContext from "../utils/FavoriteContext";
 
 import "../styles/style.css";
 import Navbar from "../components/Navbar";
@@ -9,6 +10,7 @@ import MoviesDetail from "../components/MoviesDetail";
 
 const Details = () => {
   const location = useLocation();
+  const { addToFavorites } = useContext(FavoriteContext);
 
   return (
     <>
@@ -18,6 +20,7 @@ const Details = () => {
           <MoviesDetail
             title={location.state.title}
             src={location.state.src}
+            onClickFavorite={() => addToFavorites()}
             date={location.state.date}
             description={location.state.description}
             rating={location.state.rating}

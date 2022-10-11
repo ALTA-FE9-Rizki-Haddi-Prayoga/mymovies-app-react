@@ -10,6 +10,9 @@ const MoviesDetail = (props) => {
           </Col>
           <Col className="Movie-Detail" xxl={7} lg={6} md={12}>
             <h2>{props.title}</h2>
+            <button onClick={props.onClickFavorite} className="Btn-Favorite" variant="primary">
+                  ADD TO FAVORITE
+            </button>
             <p>{props.description}</p>
             <p>Rating Movie: {props.rating} / 10</p>
             <p>Popularity: {props.popular}</p>
