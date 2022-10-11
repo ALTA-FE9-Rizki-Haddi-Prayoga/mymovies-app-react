@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useContext } from "react";
 import { WithRouter } from "../utils/Navigation";
 import { useNavigate } from "react-router-dom";
 
@@ -8,9 +8,11 @@ import CardMovies from "../components/CardMovies";
 import Footer from "../components/Footer";
 import axios from "axios";
 import { Button } from "react-bootstrap";
+import FavoriteContext from "../utils/FavoriteContext";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { addToFavorites } = useContext(FavoriteContext);
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -78,6 +80,7 @@ const Home = () => {
                   rating={data.vote_average}
                   popular={data.popularity}
                   onClick={() => detailPage(data)}
+                  onClickFavorite={() => addToFavorites(data)}
                 />
               </div>
             );

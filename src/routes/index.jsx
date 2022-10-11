@@ -4,17 +4,20 @@ import Home from "../pages/Home";
 import Details from "../pages/Details";
 import Favorite from "../pages/Favorite";
 import NotFound from "../pages/NotFound";
+import { FavoriteProvider } from "../utils/FavoriteContext";
 
 const Index = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/details" element={<Details />} />
-        <Route path="/favorite" element={<Favorite />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <FavoriteProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </FavoriteProvider>
   );
 };
 

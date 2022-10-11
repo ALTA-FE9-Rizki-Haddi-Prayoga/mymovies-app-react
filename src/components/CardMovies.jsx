@@ -14,7 +14,7 @@ const CardMovies = (props) => {
                 <Card.Link onClick={props.onClick}>
                   <h3 style={{ color: "white" }}>{props.title}</h3>
                 </Card.Link>
-                <button className="Btn-Favorite" variant="primary">
+                <button onClick={props.onClickFavorite} className="Btn-Favorite" variant="primary">
                   ADD TO FAVORITE
                 </button>
               </Card.Body>
