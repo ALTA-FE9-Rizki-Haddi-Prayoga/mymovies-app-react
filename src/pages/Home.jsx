@@ -7,15 +7,17 @@ import Navbar from "../components/Navbar";
 import CardMovies from "../components/CardMovies";
 import Footer from "../components/Footer";
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
 const Home = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState([]);
+  const [page, setPage] = useState(1);
 
-  const getMovie = async () => {
+  const getMovie = async (page) => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=id-US`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=id-US&page=${page}`
       )
       .then((response) => {
         setMovie(response.data.results);
@@ -27,10 +29,10 @@ const Home = () => {
 
   useEffect(() => {
     getMovie();
-  }, []);
+  }, [page]);
 
   const detailPage = (item) => {
-    navigate("/details", {
+    navigate(`/details`, {
       state: {
         title: item.title,
         date: item.release_date,
@@ -40,6 +42,18 @@ const Home = () => {
         popular: item.popularity,
       },
     });
+  };
+
+  const previousPage = () => {
+    if (page > 1) {
+      setPage(page - 1)
+    }
+    getMovie(page)
+  };
+
+  const nextPage = () => {
+    setPage(page + 1);
+    getMovie(page);
   };
 
   return (
@@ -68,6 +82,10 @@ const Home = () => {
               </div>
             );
           })}
+        </div>
+        <div className="container d-flex justify-content-end">
+          <Button style={{backgroundColor: '#556fe5', border: 'none'}} onClick={(value) => previousPage(value)}>Previous Page</Button>
+          <Button style={{backgroundColor: '#556fe5', border: 'none'}} className="mx-5" onClick={(value) => nextPage(value)}>Next Page</Button>
         </div>
         <Footer />
       </div>

@@ -9,9 +9,12 @@ const NavbarMovies = () => {
     <>
       <Navbar className="Navbar-Movies container-fluid" expand="lg">
         <Container className="Navbar-Nav">
-          <Navbar.Brand href="#home" className="LogoMovies">
-            <img src={logo} alt="Logo Movies" />
-          </Navbar.Brand>
+          <Link to={"/"}>
+            <Navbar.Brand className="LogoMovies">
+              <img src={logo} alt="Logo Movies" />
+            </Navbar.Brand>
+          </Link>
+
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className="bg-white"
